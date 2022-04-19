@@ -6,18 +6,20 @@ function palindrom(text) {
     return "teks harus berupa string";
   }
   const textKecil = text.toLocaleLowerCase(); // mengubah ke lowercase
-  let arrOfText = [...textKecil]; // lalu dimasukan ke dalam array
-  let string = "";
-  for (let i = arrOfText.length - 1; i >= 0; i--) {
+  let string = ""; // variable kosong sebagai penampung
+  for (let i = textKecil.length - 1; i >= 0; i--) {
     // looping untuk reverse
-    string += arrOfText[i];
+    string += textKecil[i];
   }
-  if (string == textKecil) { // validasi palindrom
+  if (string == textKecil) {
+    // validasi palindrom
     return `teks ${text} adalah palindrom`;
   }
   return `teks ${text} bukan palindrom`;
 }
 
 // demonstrasi
-const cekPal = palindrom("mayam");
+const cekPal = palindrom("MalaM");
 console.log(cekPal);
+const cekPal1 = palindrom("aYaM");
+console.log(cekPal1);
