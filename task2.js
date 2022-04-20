@@ -1,15 +1,19 @@
 // reverse words
 
-const reverseWords = () => {
-  let text = ["Saya", "Belajar", "Javascript"];
+const reverseWords = (text) => {
   let string = "";
-  for (let i = text.length - 1; i >= 0; i--) {
+  let temp = "";
+  for (let i = 0; i < text.length; i++) {
     // looping untuk reverse
-    string += text[i]+ " ";
+    if (text[i] !== " ") {
+      string += text[i];
+      continue;
+    }
+    temp = " " + string + temp;
+    string = "";
   }
-  return string;
+  return temp + " " + string;
 };
 
-let cek = reverseWords();
+let cek = reverseWords("Saya Belajar Javascript");
 console.log(cek);
-

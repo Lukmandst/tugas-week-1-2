@@ -1,10 +1,6 @@
 // fungsi arkFood
 
 const arkFood = (price, voucher, range, tax) => {
-  if ((price, voucher, range, tax === undefined)) {
-    // validasi kelengkapan parameter
-    return "Lengkapi Parameter!";
-  }
   if (typeof price != "number") {
     //validasi price
     return "Harga harus berupa number";
